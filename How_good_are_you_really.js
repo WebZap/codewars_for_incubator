@@ -1,7 +1,8 @@
 "use strict"
-//classPoints - array with points your friend
-//yourPoints - it only your point
-//let's get started
+
+
+//---------------------------------------------------------------------------------------------------------
+
 function betterThanAverage(classPoints, yourPoints) {
     let pointsFriend = classPoints;
     let onlyYourPoint = yourPoints;
@@ -13,16 +14,17 @@ function betterThanAverage(classPoints, yourPoints) {
     })
 
     let middleFriendPoint = pointsFriendSum / pointsFriend.length;
+
     if ( middleFriendPoint > onlyYourPoint){
         result = false;
     } else {
         result = true;
     }
-
     return result;
   }
-  
  console.log( betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90],9) );
+
+//---------------------------------------------------------------------------------------------------------
 
  function findNeedle(haystack) {
     // your code here
@@ -38,25 +40,52 @@ function betterThanAverage(classPoints, yourPoints) {
     })
     return result;
   }
-  
-  
   console.log(findNeedle(['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', true, false]))
 
-  let choto = [1,2,3,4]
-  console.log(choto[1])
-
-
+//---------------------------------------------------------------------------------------------------------
 
  function validatePIN (pin) {
-
     let countOfPin = Array.from(String(pin)).length
     let checkSymb = /^\d+$/.test(pin);
     if ((countOfPin == 4 || countOfPin == 6) && checkSymb == true) {
       return true;
     } else {
       return false;
-    }
-    
+    } 
   }
-
   console.log(validatePIN('a234'));
+
+//---------------------------------------------------------------------------------------------------------
+
+function getSum(a, b){
+  let arr = [];
+  let sumArr = 0;
+  console.log(arr)
+  for (let i = a; i <= b; i++){
+    arr.push[i]
+  }
+  sumArr = arr.map((element) => {
+     sumArr += element;
+  })
+  return sumArr;
+
+}
+
+console.log(getSum(-1, 3))
+
+
+//---------------------------------------------------------------------------------------------------------
+
+function getSum(a, b){
+  let result = 0
+  if( a != b) {
+    result = a + b;
+    return result;
+  } else {
+    return a;
+  }
+}
+
+console.log(getSum(2,2))
+
+//---------------------------------------------------------------------------------------------------------
