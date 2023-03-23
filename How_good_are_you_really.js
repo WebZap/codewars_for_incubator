@@ -3,26 +3,6 @@
 
 //---------------------------------------------------------------------------------------------------------
 
-function betterThanAverage(classPoints, yourPoints) {
-    let pointsFriend = classPoints;
-    let onlyYourPoint = yourPoints;
-    let pointsFriendSum = 0
-    let result = false;
-    
-    pointsFriend.forEach((element) => {
-        pointsFriendSum += element;
-    })
-
-    let middleFriendPoint = pointsFriendSum / pointsFriend.length;
-
-    if ( middleFriendPoint > onlyYourPoint){
-        result = false;
-    } else {
-        result = true;
-    }
-    return result;
-  }
- console.log( betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90],9) );
 
 //---------------------------------------------------------------------------------------------------------
 
@@ -89,3 +69,30 @@ function getSum(a, b){
 console.log(getSum(2,2))
 
 //---------------------------------------------------------------------------------------------------------
+
+function testGetSum() {
+  // Basic tests
+  // Testing for fixed tests
+  if (getSum(2, 2) !== 4) {
+    console.error('Test case 1 failed');
+  }
+  if (getSum(3, 2) !== 5) {
+    console.error('Test case 2 failed');
+  }
+  if (getSum(0, 0) !== 0) {
+    console.error('Test case 3 failed');
+  }
+}
+
+//---------------------------------------------------------------------------------------------------------
+
+const rps = (p1, p2) => {
+  let players = [p1,p2];
+
+  
+  if ( p1 == 'scissors' && p2 == 'paper'){
+    return `Player ${players.indexOf('scissors' + 1)} won!`
+  }
+};
+
+console.log(rps('scissors','paper' ))
